@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    cursor: url('https://s.electerious.com/images/codepen/cursor.svg') 9 9, auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.section-1 {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.section-1 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #303030;
+    width: 3%;
+    height: 100vh;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 14px;
+    box-shadow: black 0px 0px 25px;
+
+}
+
+.navbar ul {
+
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    transform: rotate(-90deg);
+    padding: 0;
+    justify-content: center;
+    /* Centers the items horizontally */
+    align-items: center;
+    /* Centers the items vertically */
+    height: 100%;
+    /* Ensure the ul spans the full height */
+}
+
+.navbar ul li {
+    height: auto;
+    margin-right: 20px;
+    /* Add space between list items */
+}
+
+.navbar ul li a {
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline from links */
+    display: block;
+    /* Make the links block-level so they span the width of the navbar */
+    padding: 15px 20px;
+    /* Add padding inside each menu item */
+    width: 100%;
+    /* Ensure links span the full width of the list item */
+    text-align: center;
+    /* Ensure text inside the link is centered */
+}
+
+.navbar ul li a:hover {
+    font-weight: 300;
+    scale: 1.05;
+    transition: 0.25s;
+    text-shadow: black 0px 0px 25px;
+}
+
+
+.section-1 .landing {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.section-1 .landing img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+    animation: zoomInOut 20s infinite;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.section-1 .landing .content {
+    height: auto;
+    width: 30%;
+    margin: 15% 0% 0% 15%;
+
+
+}
+
+.section-1 .landing .content h1 {
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.section-1 .landing .content p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.section-1 .landing .content button {
+    padding: 10px 20px;
+    background-color: #ffeb6b;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+.section-1 .landing .content button:hover {
+    background-color: #ffeb6b;
+    color: black;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.section-1 .landing .socials {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7%;
+    height: 40vh;
+    margin-top: 15%;
+    display: block;
+    text-align: center;
+
+
+}
+
+.Btn {
+
+    width: 55px;
+    height: 55px;
+    margin-bottom: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #075e54;
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+#fb {
+    background: #1877f2;
+}
+
+#ig {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+    backdrop-filter: blur(4px);
+}
+
+
+.section-2 {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.section-2 .sec2-left {
+    display: flex;
+
+    width: 50%;
+    height: 100%;
+}
+
+.section-2 .sec2-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.section-2 .sec2-right {
+    display: block;
+    background: linear-gradient(to right, black, #303030);
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+}
+
+.section-2 .sec2-right h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 0 5px 0;
+
+}
+
+#typing-effect {
+    display: inline-block;
+    border-right: 3px solid #000;
+    /* Cursor effect */
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(15) 1s 1 normal both, blink 0.75s step-end infinite;
+    color: #ffeb6b;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.section-2 .sec2-right p {
+    font-size: 16px;
+    font-weight: 300;
+    width: 80%;
+}
+
+.section-2 .sec2-right button {
+    padding: 10px 20px;
+    background-color: #fe4988;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.section-2 .sec2-right button:hover {
+    background-color: #c7255e;
+    color: white;
+    font-weight: 100;
+    transition: 0.25s;
+    scale: 1.05;
+}
+
+.section-3 {
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    display: block;
+
+}
+
+.section-3 .sec3-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 3%;
+
+
+}
+
+.section-3 .sec3-main h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    /* Remove extra margin */
+    color: #fe4988;
+    text-align: center;
+    /* Ensure the text is centered */
+}
+
+.section-3 .sec3-main p {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    /* Ensure the text is centered */
+}
+
+#sec-img1 {
+    background-image: url(image/3.jpg);
+    background-position: 20%;
+
+}
+
+#sec-img2 {
+    background-image: url(image/4.jpg);
+    background-position: 20%;
+}
+
+#sec-img3 {
+    background-image: url(image/5.jpg);
+
+}
+
+#sec-img4 {
+    background-image: url(image/6.jpg);
+    background-position: 20%;
+}
+
+#sec-img5 {
+    background-image: url(image/7.jpg);
+    background-position: 20%;
+}
+
+
+
+.section-3 .sec3-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.section-3 .sec3-1 .sec-img {
+    width: 50%;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+    /* Ensure the image is centered */
+    opacity: 0.5;
+    box-shadow: #000000 0px 0px 15px;
+    /* Helps with better positioning of the image */
+}
+
+
+
+.section-3 .sec3-1 a {
+    text-decoration: none;
+    margin: auto;
+
+
+}
+
+.section-3 .sec3-1 p {
+    text-transform: uppercase;
+    width: auto;
+    margin: auto;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-shadow: #0000 0px 0px 25px;
+
+
+}
+
+.section-3 .sec3-1 p:hover {
+    background: linear-gradient(to right, #fe4988, #ffeb6b);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.25s ease-in-out;
+    scale: 1.05;
+}
+
+
+.section-4 {
+    background-color: #303030;
+}
+
+.section-4 .sec3-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 2%;
+
+}
+
+.section-4 .sec3-main h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    /* Remove extra margin */
+    color: #fe4988;
+    text-align: center;
+    /* Ensure the text is centered */
+}
+
+#typing-effect2 {
+    display: inline-block;
+    border-right: 3px solid #000;
+    /* Cursor effect */
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(15) 1s 1 normal both, blink 0.75s step-end infinite;
+    color: #ffeb6b;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.section-4 .sec4-pic {
+    width: 100%;
+    height: 70vh;
+
+}
+
+.section-4 .sec4-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.section-4 .sec4-pic .sec4-content {
+
+    width: 100%;
+    height: 15%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: -7.5%;
+}
+
+
+.section-4 .sec4-pic .sec4-content h1,
+p {
+    padding: 10px;
+    text-shadow: #000000 0px 0px 25px;
+}
+
+.section-5 .sec3-main {
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 2%;
+
+}
+
+.section-5 .sec3-main h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    /* Remove extra margin */
+    color: #fe4988;
+    text-align: center;
+    /* Ensure the text is centered */
+}
+
+.section-5 .sec5-test {
+    width: 100%;
+    height: 40vh;
+    background-color: #303030;
+    display: flex;
+}
+
+.section-5 .sec5-test .sec5-test1 {
+    width: 33.3%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.section-5 .sec5-test .sec5-test1 img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: -1;
+
+}
+
+.section-5 .sec5-test .sec5-test1 h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    margin-top: -10%;
+    margin-left: 2.5%;
+    z-index: 1;
+}
+
+.section-5 .sec5-test .sec5-test1 p {
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    text-align: left;
+    margin-top: 5%;
+}
+
+#s5p1 {
+    background-position: 50%;
+}
+
+#s5p2 {
+    background-position: 50%;
+}
+
+#s5p3 {
+    background-position: 50%;
+}
+
+
+footer {
+    background-color: #000000;
+    width: 100%;
+    height: 70vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-image: url(image/2.jpg);
+    background-size: cover;
+    /* Ensures the image covers the footer */
+    background-position: center;
+    /* Centers the image within the footer */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+}
+
+
+footer h1 {
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    /* Remove extra margin */
+    color: white;
+    text-align: center;
+    padding: 2.5%;
+    opacity: 0.75;
+    /* Ensure the text is centered */
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    /* Ensure the text is centered */
+}
+
+footer .contact-info {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+footer .contact-info a {
+    display: block;
+    margin: 5px 0px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    /* Ensure the text is centered */
+}
+
+footer .contact-info a:hover {
+    color: #ffeb6b;
+    transition: 0.25s;
+}
+
+footer .loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+
+
+}
+
+footer .loc img {
+    filter: invert(1);
+    margin-right: 10px;
+}
+
+#me {
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    bottom: 0;
+}
+
+#Portfolio {
+    margin-left: 43.5%;
+    padding: 10px 20px;
+    background-color: #ffeb6b;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#Portfolio:hover {
+    scale: 1.05;
+    transition: 50ms ease-in-out;
+    background-color: #c7255e;
+    color: white;
+    font-weight: 200;
+    transition: 0.25s;
+}
+
+
+/* Media Queries **********************************************************************************************************************************************************************************
+/* ********************************************************************************************************************************************************************************** */
+
+
+
+/* iPhone 14 Pro Plus specific styles */
+@media only screen and (max-width: 435px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .section-1 .navbar{
+        display: none;
+    }
+    .section-1 .landing {
+        width: 100%;
+        height: 100vh;
+    }
+    .section-1 .landing img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.5;
+        animation: zoomInOut 20s infinite;
+    }
+    .section-1 .landing .content {
+        width: 70%; 
+        position: relative;
+        top: 45%;
+        margin: 15%;
+    }
+
+    .section-1 .landing .content h1 {
+        font-size: 50px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .section-1 .landing .socials{
+        background-color: #bc188877;
+       margin-right: 5%;
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section-2{
+        display: none;
+    }
+    
+    .section-3{
+        display: none;
+    }
+    .section-4{
+        display: none;
+    }
+    .section-5{
+        display: none;
+    }
+    .section-6{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+
+
+    
+}
+
+    
